@@ -3,16 +3,21 @@ package utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class UIAutomationUtils {
 	// IMPLEMENTATION FOR RE-USABLE METHODS
@@ -88,7 +93,6 @@ public class UIAutomationUtils {
 		Workbook workBook = new XSSFWorkbook(fis);
 		Sheet sheet = workBook.getSheet("ObjectRepository");
 		int numRows = sheet.getLastRowNum();
-		//int numCols = sheet.getRow(0).getLastCellNum();
 		for(int i=0; i<=numRows; i++) {
 			if(sheet.getRow(i).getCell(1).getStringCellValue().equalsIgnoreCase(locatorName)) {
 				String locatorType = sheet.getRow(i).getCell(2).getStringCellValue();
@@ -128,5 +132,20 @@ public class UIAutomationUtils {
 		}
 		workBook.close();
 		return TestData;
+	}
+
+	public void TakeScreenshot(String ScenarioId) {
+		TakesScreenshot scrShot =((TakesScreenshot)this.driver);
+		Date currentDate = new Date();
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		File DestFile=new File(System.getProperty("user.dir")+"\\Screenshots\\"+ScenarioId+"_"+currentDate.getTime()+".jpg");
+		try {
+			FileUtils.copyFile(SrcFile, DestFile);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		this.driver.quit();
+		Assert.fail();
+		
 	}
 }

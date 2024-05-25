@@ -20,17 +20,22 @@ public class AppUtilityClass extends UIAutomationUtils{
 		this.driver = driver;
 	}
 	
-//	public String login(String ScenarioId) throws IOException {
-////		String PageName = "Login";
-////		this.type(this.getLocatorFromDataSource("UserIdTxtFld"), userName);
-////		this.type(this.getLocatorFromDataSource("PwdTxtField"), password);
-////		this.clickElement(this.getLocatorFromDataSource("SignInLink"));
-////		if(this.elementExist(this.getLocatorFromDataSource("SignInLink"))) {
-////			return "Pass";
-////		}else {
-////			return "Fail";
-////		}
-//	}
+	public String login(String ScenarioId) throws IOException {
+		String PageName = "Login";
+		TestData = this.getTestData(PageName, ScenarioId);
+		String ScenarioType = TestData.get("ScenarioType");
+		this.clickElement(this.getWebElement("SignInLink"));
+		this.type(this.getWebElement("UserIdTxtFld"), TestData.get("EmailId"));
+		this.type(this.getWebElement("PwdTxtField"), TestData.get("Password"));
+		this.clickElement(this.getWebElement("SignInBtn"));
+		if(ScenarioType.equalsIgnoreCase("Positive") & this.elementExist(this.getWebElements("LoggedInUser"))==true) {
+			return "Pass";
+		}else if (ScenarioType.equalsIgnoreCase("Negative") & this.elementExist(this.getWebElements("LoggedInUser"))==false) {
+			return "Pass";
+		}else {
+			return "Fail";
+		}		
+	}
 	
 	public String registeration(String ScenarioId) {
 		try {
