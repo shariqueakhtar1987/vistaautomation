@@ -10,6 +10,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -92,10 +95,21 @@ public class Hooks {
 	}
 	
 	public void launchBrowser() {
-		if(configObject.get("browser").equalsIgnoreCase("CHROME")) {
-			System.setProperty("webdriver.chromer.driver", configObject.get("browser_driver_path"));
+		if(configObject.get("browser").equalsIgnoreCase("Chrome")) {
+			System.setProperty("webdriver.chromer.driver", configObject.get("chromebrowser_driver_path"));
 			 this.driver = new ChromeDriver();
-		}
+		}else if(configObject.get("browser").equalsIgnoreCase("Firefox")) {
+			System.setProperty("webdriver.chromer.driver", configObject.get("firefoxbrowser_driver_path"));
+			this.driver = new FirefoxDriver();
+		}else if(configObject.get("browser").equalsIgnoreCase("Edge")) {
+			System.setProperty("webdriver.edge.driver", configObject.get("edgebrowser_driver_path"));
+			this.driver = new EdgeDriver();
+		}else if(configObject.get("browser").equalsIgnoreCase("Safari")) {
+			System.setProperty("webdriver.safari.driver", configObject.get("safaribrowser_driver_path"));
+			this.driver = new SafariDriver();
+		}		
+		this.driver.get(configObject.get("base_url"));
+		this.driver.manage().window().maximize();
 	}
 	
 	public void closeBrowser() {

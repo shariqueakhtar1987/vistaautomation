@@ -1,41 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-25T10:30:07 GST" name="Default suite" finished-at="2024-05-25T10:30:18 GST" duration-ms="10841">
+  <suite started-at="2024-05-25T23:55:45 GST" name="Default suite" finished-at="2024-05-25T23:56:58 GST" duration-ms="72845">
     <groups>
     </groups>
-    <test started-at="2024-05-25T10:30:07 GST" name="Default test" finished-at="2024-05-25T10:30:18 GST" duration-ms="10841">
-      <class name="tests.GTPLBankLoginTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:07 GST" name="beforeSuite" finished-at="2024-05-25T10:30:07 GST" duration-ms="142" status="PASS">
+    <test started-at="2024-05-25T23:55:45 GST" name="Default test" finished-at="2024-05-25T23:56:58 GST" duration-ms="72845">
+      <class name="tests.VistaTestClass">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:55:45 GST" name="beforeSuite" finished-at="2024-05-25T23:55:45 GST" duration-ms="128" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:07 GST" name="beforeTest" finished-at="2024-05-25T10:30:07 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:55:45 GST" name="beforeTest" finished-at="2024-05-25T23:55:45 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:07 GST" name="beforeMethod" finished-at="2024-05-25T10:30:09 GST" duration-ms="2028" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:55:45 GST" name="beforeMethod" finished-at="2024-05-25T23:55:55 GST" duration-ms="9516" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="testLoginFunctionalityPositive()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:09 GST" name="testLoginFunctionalityPositive" finished-at="2024-05-25T10:30:18 GST" duration-ms="8504" status="PASS">
+        <test-method signature="RegisterationFunctionality_PositiveScenario_RegisterationScenario1()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:55:55 GST" name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1" finished-at="2024-05-25T23:56:00 GST" duration-ms="5766" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginFunctionalityPositive -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:18 GST" name="afterMethod" finished-at="2024-05-25T10:30:18 GST" duration-ms="286" status="PASS">
+        </test-method> <!-- RegisterationFunctionality_PositiveScenario_RegisterationScenario1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:00 GST" name="afterMethod" finished-at="2024-05-25T23:56:01 GST" duration-ms="235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:18 GST" name="afterTest" finished-at="2024-05-25T10:30:18 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:01 GST" name="beforeMethod" finished-at="2024-05-25T23:56:14 GST" duration-ms="12943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:14 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2" finished-at="2024-05-25T23:56:18 GST" duration-ms="4124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:18 GST" name="afterMethod" finished-at="2024-05-25T23:56:18 GST" duration-ms="172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:18 GST" name="beforeMethod" finished-at="2024-05-25T23:56:27 GST" duration-ms="9394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:27 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3" finished-at="2024-05-25T23:56:32 GST" duration-ms="4381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:32 GST" name="afterMethod" finished-at="2024-05-25T23:56:32 GST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:32 GST" name="beforeMethod" finished-at="2024-05-25T23:56:42 GST" duration-ms="10322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:42 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4" finished-at="2024-05-25T23:56:45 GST" duration-ms="3246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario4 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:45 GST" name="afterMethod" finished-at="2024-05-25T23:56:46 GST" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:46 GST" name="beforeMethod" finished-at="2024-05-25T23:56:54 GST" duration-ms="8571" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:54 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5" finished-at="2024-05-25T23:56:58 GST" duration-ms="3548" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario5 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:58 GST" name="afterMethod" finished-at="2024-05-25T23:56:58 GST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:58 GST" name="afterTest" finished-at="2024-05-25T23:56:58 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.GTPLBankLoginTest@60f00693]" started-at="2024-05-25T10:30:18 GST" name="afterSuite" finished-at="2024-05-25T10:30:18 GST" duration-ms="247" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.VistaTestClass@7b4c50bc]" started-at="2024-05-25T23:56:58 GST" name="afterSuite" finished-at="2024-05-25T23:56:58 GST" duration-ms="248" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.GTPLBankLoginTest -->
+      </class> <!-- tests.VistaTestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
