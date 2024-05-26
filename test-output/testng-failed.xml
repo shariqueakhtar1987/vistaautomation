@@ -3,17 +3,17 @@
 <suite name="Failed suite [VistaAutomatotionTestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="tests.VistaTestScenariosClass">
+      <class name="tests.VistaLogInLogOutTestScenarioClass">
         <methods>
           <include name="beforeMethod"/>
-          <include name="LoginFunctionality_PositiveScenario_LoginScenario3"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="beforeSuite"/>
+          <include name="LoginFunctionality_PositiveScenario_LoginScenario3"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- tests.VistaTestScenariosClass -->
+      </class> <!-- tests.VistaLogInLogOutTestScenarioClass -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [VistaAutomatotionTestSuite] -->

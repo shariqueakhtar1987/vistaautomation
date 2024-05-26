@@ -17,12 +17,16 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
+
 
 public class UIAutomationUtils {
 	// IMPLEMENTATION FOR RE-USABLE METHODS
 	
 	public WebDriver driver;
+	Wait<WebDriver> wait;
 	
 	public UIAutomationUtils(WebDriver driver) {
 		this.driver = driver;
@@ -38,14 +42,29 @@ public class UIAutomationUtils {
 	}
 	
 	public void clickElement(WebElement element) {
+		waitForWebElement(element);
 		element.click();
 	}
 	
-	public void type(WebElement element, String text) {
+	public void  moveToElement(WebElement element) {
+		Actions actions = new Actions(this.driver);
+		actions.moveToElement(element).build().perform();
+	}
+	
+	public void clickElementwithTxt(List<WebElement> element, String Text) {
+		for(WebElement e: element) {
+			if(e.getText().equalsIgnoreCase(Text)) {
+				clickElement(e);
+			}
+		}		
+	}
+	
+ 	public void type(WebElement element, String text) {
+		waitForWebElement(element);
 		element.sendKeys(text);
 	}
 	
-	public boolean elementExist(List<WebElement> element) {
+	public boolean elementExist(List<WebElement> element) throws InterruptedException {
 		if(element.size()>0) {
 			return true;
 		}else {
@@ -53,11 +72,12 @@ public class UIAutomationUtils {
 		}
 	}
 	
-	public void waitForWebElement(By element) {
-//		Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(Hooks.configObject.get("wait_duration"))));
-//		wait.until(el -> driver.findElement(element).isDisplayed());
+	public void waitForWebElement(WebElement element) {
+//		wait = new WebDriverWait(this.driver,Duration.ofSeconds(Integer.parseInt(Hooks.configObject.get("wait_duration"))));
+//		//Hooks.configObject.get("wait_duration")
+//		wait.until(ExpectedConditions.);
+		
 	}
-	
 	public WebElement getWebElement(String locatorName) throws IOException {
 
 		FileInputStream fis = new FileInputStream(new File("./src/test/resources/webelements.xlsx"));

@@ -1,61 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
+<testng-results ignored="4" total="12" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-26T09:48:22 GST" name="VistaAutomatotionTestSuite" finished-at="2024-05-26T09:49:30 GST" duration-ms="68071">
+  <suite started-at="2024-05-26T12:50:56 GST" name="VistaAutomatotionTestSuite" finished-at="2024-05-26T12:52:27 GST" duration-ms="91144">
     <groups>
       <group name="Registeration Functionality">
-        <method signature="VistaTestScenariosClass.RegisterationFunctionality_PositiveScenario_RegisterationScenario1()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario2()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario3()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario4()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario5()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5" class="tests.VistaTestScenariosClass"/>
+        <method signature="VistaRegisterationTestScenarioClass.RegisterationFunctionality_PositiveScenario_RegisterationScenario1()[pri:1, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1" class="tests.VistaRegisterationTestScenarioClass"/>
+        <method signature="VistaRegisterationTestScenarioClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario2()[pri:2, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2" class="tests.VistaRegisterationTestScenarioClass"/>
+        <method signature="VistaRegisterationTestScenarioClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario3()[pri:3, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3" class="tests.VistaRegisterationTestScenarioClass"/>
+        <method signature="VistaRegisterationTestScenarioClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario4()[pri:4, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4" class="tests.VistaRegisterationTestScenarioClass"/>
+        <method signature="VistaRegisterationTestScenarioClass.RegisterationFunctionality__NegativeScenaio_RegisterationScenario5()[pri:5, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5" class="tests.VistaRegisterationTestScenarioClass"/>
       </group> <!-- Registeration Functionality -->
       <group name="Login Functionality">
-        <method signature="VistaTestScenariosClass.LoginFunctionality_NegativeScenario_LoginScenario2()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="LoginFunctionality_NegativeScenario_LoginScenario2" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.LoginFunctionality_PositiveScenario_LoginScenario1()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="LoginFunctionality_PositiveScenario_LoginScenario1" class="tests.VistaTestScenariosClass"/>
-        <method signature="VistaTestScenariosClass.LoginFunctionality_PositiveScenario_LoginScenario3()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" name="LoginFunctionality_PositiveScenario_LoginScenario3" class="tests.VistaTestScenariosClass"/>
+        <method signature="VistaLogInLogOutTestScenarioClass.LoginFunctionality_NegativeScenario_LoginScenario2()[pri:2, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" name="LoginFunctionality_NegativeScenario_LoginScenario2" class="tests.VistaLogInLogOutTestScenarioClass"/>
+        <method signature="VistaLogInLogOutTestScenarioClass.LoginFunctionality_PositiveScenario_LoginScenario1()[pri:1, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" name="LoginFunctionality_PositiveScenario_LoginScenario1" class="tests.VistaLogInLogOutTestScenarioClass"/>
+        <method signature="VistaLogInLogOutTestScenarioClass.LoginFunctionality_PositiveScenario_LoginScenario3()[pri:3, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" name="LoginFunctionality_PositiveScenario_LoginScenario3" class="tests.VistaLogInLogOutTestScenarioClass"/>
       </group> <!-- Login Functionality -->
     </groups>
-    <test started-at="2024-05-26T09:48:22 GST" name="Test" finished-at="2024-05-26T09:49:30 GST" duration-ms="68071">
-      <class name="tests.VistaTestScenariosClass">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:21 GST" name="beforeSuite" finished-at="2024-05-26T09:48:21 GST" duration-ms="236" status="PASS">
+    <test started-at="2024-05-26T12:50:56 GST" name="Test" finished-at="2024-05-26T12:52:27 GST" duration-ms="91144">
+      <class name="tests.VistaRegisterationTestScenarioClass">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:31 GST" name="beforeMethod" finished-at="2024-05-26T12:51:36 GST" duration-ms="5790" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality_PositiveScenario_RegisterationScenario1()[pri:1, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:36 GST" name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1" finished-at="2024-05-26T12:51:43 GST" duration-ms="6321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality_PositiveScenario_RegisterationScenario1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:43 GST" name="afterMethod" finished-at="2024-05-26T12:51:44 GST" duration-ms="1308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:44 GST" name="beforeMethod" finished-at="2024-05-26T12:51:51 GST" duration-ms="6532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2()[pri:2, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:51 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2" finished-at="2024-05-26T12:51:54 GST" duration-ms="3155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:54 GST" name="afterMethod" finished-at="2024-05-26T12:51:55 GST" duration-ms="1365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:51:55 GST" name="beforeMethod" finished-at="2024-05-26T12:52:01 GST" duration-ms="5717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3()[pri:3, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:01 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3" finished-at="2024-05-26T12:52:05 GST" duration-ms="4440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:05 GST" name="afterMethod" finished-at="2024-05-26T12:52:07 GST" duration-ms="1365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:07 GST" name="beforeMethod" finished-at="2024-05-26T12:52:12 GST" duration-ms="5768" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4()[pri:4, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:12 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4" finished-at="2024-05-26T12:52:16 GST" duration-ms="3165" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario4 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:16 GST" name="afterMethod" finished-at="2024-05-26T12:52:17 GST" duration-ms="1365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:17 GST" name="beforeMethod" finished-at="2024-05-26T12:52:23 GST" duration-ms="6057" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5()[pri:5, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:23 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5" finished-at="2024-05-26T12:52:26 GST" duration-ms="3080" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario5 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaRegisterationTestScenarioClass@23f5b5dc]" started-at="2024-05-26T12:52:26 GST" name="afterMethod" finished-at="2024-05-26T12:52:27 GST" duration-ms="1377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- tests.VistaRegisterationTestScenarioClass -->
+      <class name="tests.VistaLogInLogOutTestScenarioClass">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:50:56 GST" name="beforeSuite" finished-at="2024-05-26T12:50:56 GST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:22 GST" name="beforeTest" finished-at="2024-05-26T09:48:22 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:50:56 GST" name="beforeTest" finished-at="2024-05-26T12:50:56 GST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:22 GST" name="beforeMethod" finished-at="2024-05-26T09:48:27 GST" duration-ms="5841" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:50:56 GST" name="beforeMethod" finished-at="2024-05-26T12:51:03 GST" duration-ms="6797" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="LoginFunctionality_NegativeScenario_LoginScenario2()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:27 GST" name="LoginFunctionality_NegativeScenario_LoginScenario2" finished-at="2024-05-26T09:48:30 GST" duration-ms="2797" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginFunctionality_NegativeScenario_LoginScenario2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:30 GST" name="afterMethod" finished-at="2024-05-26T09:48:30 GST" duration-ms="268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:30 GST" name="beforeMethod" finished-at="2024-05-26T09:48:35 GST" duration-ms="4953" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="LoginFunctionality_PositiveScenario_LoginScenario1()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:35 GST" name="LoginFunctionality_PositiveScenario_LoginScenario1" finished-at="2024-05-26T09:48:38 GST" duration-ms="2676" status="PASS">
+        <test-method signature="LoginFunctionality_PositiveScenario_LoginScenario1()[pri:1, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:03 GST" name="LoginFunctionality_PositiveScenario_LoginScenario1" finished-at="2024-05-26T12:51:08 GST" duration-ms="5349" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginFunctionality_PositiveScenario_LoginScenario1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:38 GST" name="afterMethod" finished-at="2024-05-26T09:48:38 GST" duration-ms="207" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:08 GST" name="afterMethod" finished-at="2024-05-26T12:51:10 GST" duration-ms="1315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:38 GST" name="beforeMethod" finished-at="2024-05-26T09:48:43 GST" duration-ms="4493" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:10 GST" name="beforeMethod" finished-at="2024-05-26T12:51:16 GST" duration-ms="6407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="LoginFunctionality_PositiveScenario_LoginScenario3()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:43 GST" name="LoginFunctionality_PositiveScenario_LoginScenario3" finished-at="2024-05-26T09:48:47 GST" duration-ms="4250" status="FAIL">
+        <test-method signature="LoginFunctionality_NegativeScenario_LoginScenario2()[pri:2, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:16 GST" name="LoginFunctionality_NegativeScenario_LoginScenario2" finished-at="2024-05-26T12:51:18 GST" duration-ms="2076" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginFunctionality_NegativeScenario_LoginScenario2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:18 GST" name="afterMethod" finished-at="2024-05-26T12:51:20 GST" duration-ms="1333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:20 GST" name="beforeMethod" finished-at="2024-05-26T12:51:25 GST" duration-ms="5793" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="LoginFunctionality_PositiveScenario_LoginScenario3()[pri:3, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:25 GST" name="LoginFunctionality_PositiveScenario_LoginScenario3" finished-at="2024-05-26T12:51:31 GST" duration-ms="5223" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -64,8 +126,8 @@
               <![CDATA[java.lang.AssertionError: null
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.fail(Assert.java:106)
-at utils.UIAutomationUtils.TakeScreenshot(UIAutomationUtils.java:148)
-at tests.VistaTestScenariosClass.LoginFunctionality_PositiveScenario_LoginScenario3(VistaTestScenariosClass.java:52)
+at utils.UIAutomationUtils.TakeScreenshot(UIAutomationUtils.java:158)
+at tests.VistaLogInLogOutTestScenarioClass.LoginFunctionality_PositiveScenario_LoginScenario3(VistaLogInLogOutTestScenarioClass.java:68)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,79 +162,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginFunctionality_PositiveScenario_LoginScenario3 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:47 GST" name="afterMethod" finished-at="2024-05-26T09:48:47 GST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:51:31 GST" name="afterMethod" finished-at="2024-05-26T12:51:31 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:47 GST" name="beforeMethod" finished-at="2024-05-26T09:48:52 GST" duration-ms="5037" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RegisterationFunctionality_PositiveScenario_RegisterationScenario1()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:52 GST" name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1" finished-at="2024-05-26T09:48:56 GST" duration-ms="4412" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterationFunctionality_PositiveScenario_RegisterationScenario1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:56 GST" name="afterMethod" finished-at="2024-05-26T09:48:57 GST" duration-ms="275" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:48:57 GST" name="beforeMethod" finished-at="2024-05-26T09:49:01 GST" duration-ms="4608" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:01 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario2" finished-at="2024-05-26T09:49:04 GST" duration-ms="2901" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:04 GST" name="afterMethod" finished-at="2024-05-26T09:49:05 GST" duration-ms="283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:05 GST" name="beforeMethod" finished-at="2024-05-26T09:49:09 GST" duration-ms="4439" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:09 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario3" finished-at="2024-05-26T09:49:13 GST" duration-ms="4282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario3 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:13 GST" name="afterMethod" finished-at="2024-05-26T09:49:13 GST" duration-ms="227" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:13 GST" name="beforeMethod" finished-at="2024-05-26T09:49:18 GST" duration-ms="4606" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:18 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario4" finished-at="2024-05-26T09:49:21 GST" duration-ms="2974" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario4 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:21 GST" name="afterMethod" finished-at="2024-05-26T09:49:21 GST" duration-ms="245" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:21 GST" name="beforeMethod" finished-at="2024-05-26T09:49:26 GST" duration-ms="4645" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:26 GST" name="RegisterationFunctionality__NegativeScenaio_RegisterationScenario5" finished-at="2024-05-26T09:49:29 GST" duration-ms="3350" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RegisterationFunctionality__NegativeScenaio_RegisterationScenario5 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:29 GST" name="afterMethod" finished-at="2024-05-26T09:49:30 GST" duration-ms="253" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:30 GST" name="afterTest" finished-at="2024-05-26T09:49:30 GST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:52:27 GST" name="afterTest" finished-at="2024-05-26T12:52:27 GST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.VistaTestScenariosClass@7a6d7e92]" started-at="2024-05-26T09:49:30 GST" name="afterSuite" finished-at="2024-05-26T09:49:30 GST" duration-ms="314" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.VistaLogInLogOutTestScenarioClass@1a4927d6]" started-at="2024-05-26T12:52:27 GST" name="afterSuite" finished-at="2024-05-26T12:52:28 GST" duration-ms="250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.VistaTestScenariosClass -->
+      </class> <!-- tests.VistaLogInLogOutTestScenarioClass -->
     </test> <!-- Test -->
   </suite> <!-- VistaAutomatotionTestSuite -->
 </testng-results>

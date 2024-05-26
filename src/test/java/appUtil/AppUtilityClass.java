@@ -20,7 +20,7 @@ public class AppUtilityClass extends UIAutomationUtils{
 		this.driver = driver;
 	}
 	
-	public String login(String ScenarioId) throws IOException {
+	public String login(String ScenarioId) throws IOException, InterruptedException {
 		String PageName = "Login";
 		TestData = this.getTestData(PageName, ScenarioId);
 		String ScenarioType = TestData.get("ScenarioType");
@@ -37,7 +37,19 @@ public class AppUtilityClass extends UIAutomationUtils{
 		}		
 	}
 	
-	public String registeration(String ScenarioId) {
+	public String logout(String ScenarioId) throws IOException, InterruptedException {
+		String ScenarioType = TestData.get("ScenarioType");
+		this.clickElement(this.getWebElement("SignOutBtn"));
+		if(ScenarioType.equalsIgnoreCase("Positive") & this.elementExist(this.getWebElements("SignInLink"))==true) {
+			return "Pass";
+		}else if (ScenarioType.equalsIgnoreCase("Negative") & this.elementExist(this.getWebElements("SignInLink"))==false) {
+			return "Pass";
+		}else {
+			return "Fail";
+		}
+	}
+	
+	public String registeration(String ScenarioId) throws InterruptedException {
 		try {
 			String PageName = "Registeration";
 			TestData = this.getTestData(PageName, ScenarioId);
@@ -84,4 +96,14 @@ public class AppUtilityClass extends UIAutomationUtils{
 		return null;
 		
 	}
+
+	public String shopItems(String ScenarioId) throws IOException {
+		String PageName = "Shoping";
+		TestData = this.getTestData(PageName, ScenarioId);
+		
+		return ScenarioId;
+		
+	}
+
+
 }

@@ -95,6 +95,7 @@ public class Hooks {
 	}
 	
 	public void launchBrowser() {
+		//String[] BrowserName = configObject.get("browserlist").split(",");
 		if(configObject.get("browser").equalsIgnoreCase("Chrome")) {
 			System.setProperty("webdriver.chromer.driver", configObject.get("chromebrowser_driver_path"));
 			 this.driver = new ChromeDriver();
