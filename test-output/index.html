@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-VistaAutomatotionTestSuite" class="navigator-link">
-              <span class="suite-name border-passed">VistaAutomatotionTestSuite</span>
+              <span class="suite-name border-failed">VistaAutomatotionTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-VistaAutomatotionTestSuite" class="hide-methods failed suite-VistaAutomatotionTestSuite"> (hide)</a> <!-- hide-methods failed suite-VistaAutomatotionTestSuite -->
+                      <a href="#" panel-name="suite-VistaAutomatotionTestSuite" class="show-methods failed suite-VistaAutomatotionTestSuite"> (show)</a> <!-- show-methods failed suite-VistaAutomatotionTestSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-VistaAutomatotionTestSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-VistaAutomatotionTestSuite" title="tests.VistaTestScenariosClass" class="method navigator-link" hash-for-method="LoginFunctionality_PositiveScenario_LoginScenario3">LoginFunctionality_PositiveScenario_LoginScenario3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-VistaAutomatotionTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -110,11 +124,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-VistaAutomatotionTestSuite" title="tests.VistaTestScenariosClass" class="method navigator-link" hash-for-method="LoginFunctionality_PositiveScenario_LoginScenario1">LoginFunctionality_PositiveScenario_LoginScenario1</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-VistaAutomatotionTestSuite" title="tests.VistaTestScenariosClass" class="method navigator-link" hash-for-method="LoginFunctionality_PositiveScenario_LoginScenario3">LoginFunctionality_PositiveScenario_LoginScenario3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -154,6 +163,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-VistaAutomatotionTestSuite" class="panel VistaAutomatotionTestSuite">
+          <div class="suite-VistaAutomatotionTestSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.VistaTestScenariosClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LoginFunctionality_PositiveScenario_LoginScenario3">
+                  </a> <!-- LoginFunctionality_PositiveScenario_LoginScenario3 -->
+                  <span class="method-name">LoginFunctionality_PositiveScenario_LoginScenario3</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at utils.UIAutomationUtils.TakeScreenshot(UIAutomationUtils.java:148)
+	at tests.VistaTestScenariosClass.LoginFunctionality_PositiveScenario_LoginScenario3(VistaTestScenariosClass.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-VistaAutomatotionTestSuite-class-failed -->
           <div class="suite-VistaAutomatotionTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -172,13 +202,6 @@
                   <a name="LoginFunctionality_PositiveScenario_LoginScenario1">
                   </a> <!-- LoginFunctionality_PositiveScenario_LoginScenario1 -->
                   <span class="method-name">LoginFunctionality_PositiveScenario_LoginScenario1</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="LoginFunctionality_PositiveScenario_LoginScenario3">
-                  </a> <!-- LoginFunctionality_PositiveScenario_LoginScenario3 -->
-                  <span class="method-name">LoginFunctionality_PositiveScenario_LoginScenario3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -312,42 +335,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario2')
+data.setCell(0, 1, 'RegisterationFunctionality_PositiveScenario_RegisterationScenario1')
 data.setCell(0, 2, 'tests.VistaTestScenariosClass')
-data.setCell(0, 3, 5797);
+data.setCell(0, 3, 4412);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'RegisterationFunctionality_PositiveScenario_RegisterationScenario1')
+data.setCell(1, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario3')
 data.setCell(1, 2, 'tests.VistaTestScenariosClass')
-data.setCell(1, 3, 5011);
+data.setCell(1, 3, 4282);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario3')
+data.setCell(2, 1, 'LoginFunctionality_PositiveScenario_LoginScenario3')
 data.setCell(2, 2, 'tests.VistaTestScenariosClass')
-data.setCell(2, 3, 4994);
+data.setCell(2, 3, 4250);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario5')
 data.setCell(3, 2, 'tests.VistaTestScenariosClass')
-data.setCell(3, 3, 3911);
+data.setCell(3, 3, 3350);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'LoginFunctionality_NegativeScenario_LoginScenario2')
+data.setCell(4, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario4')
 data.setCell(4, 2, 'tests.VistaTestScenariosClass')
-data.setCell(4, 3, 3722);
+data.setCell(4, 3, 2974);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'LoginFunctionality_PositiveScenario_LoginScenario1')
+data.setCell(5, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario2')
 data.setCell(5, 2, 'tests.VistaTestScenariosClass')
-data.setCell(5, 3, 3571);
+data.setCell(5, 3, 2901);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'RegisterationFunctionality__NegativeScenaio_RegisterationScenario4')
+data.setCell(6, 1, 'LoginFunctionality_NegativeScenario_LoginScenario2')
 data.setCell(6, 2, 'tests.VistaTestScenariosClass')
-data.setCell(6, 3, 3517);
+data.setCell(6, 3, 2797);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'LoginFunctionality_PositiveScenario_LoginScenario3')
+data.setCell(7, 1, 'LoginFunctionality_PositiveScenario_LoginScenario1')
 data.setCell(7, 2, 'tests.VistaTestScenariosClass')
-data.setCell(7, 3, 3177);
+data.setCell(7, 3, 2676);
 window.suiteTableData['VistaAutomatotionTestSuite']= { tableData: data, tableDiv: 'times-div-VistaAutomatotionTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-VistaAutomatotionTestSuite">
               </div> <!-- times-div-VistaAutomatotionTestSuite -->
             </div> <!-- times-div -->
@@ -380,111 +403,113 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">224 ms</span>
+                <span class="method-start">239 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">255 ms</span>
+                <span class="method-start">268 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginFunctionality_NegativeScenario_LoginScenario2</span>
-                <span class="method-start">17431 ms</span>
+                <span class="method-start">6111 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">21157 ms</span>
+                <span class="method-start">8910 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">21502 ms</span>
+                <span class="method-start">9179 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">LoginFunctionality_PositiveScenario_LoginScenario1</span>
-                <span class="method-start">37117 ms</span>
+                <span class="method-start">14132 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">40689 ms</span>
+                <span class="method-start">16809 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">41083 ms</span>
+                <span class="method-start">17016 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">LoginFunctionality_PositiveScenario_LoginScenario3</span>
-                <span class="method-start">48318 ms</span>
+                <span class="method-start">21509 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">51496 ms</span>
+                <span class="method-start">25761 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">51712 ms</span>
+                <span class="method-start">25762 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterationFunctionality_PositiveScenario_RegisterationScenario1</span>
-                <span class="method-start">63524 ms</span>
+                <span class="method-start">30799 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">68536 ms</span>
+                <span class="method-start">35212 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">68911 ms</span>
+                <span class="method-start">35487 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterationFunctionality__NegativeScenaio_RegisterationScenario2</span>
-                <span class="method-start">81225 ms</span>
+                <span class="method-start">40095 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">87023 ms</span>
+                <span class="method-start">42997 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">87261 ms</span>
+                <span class="method-start">43280 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterationFunctionality__NegativeScenaio_RegisterationScenario3</span>
-                <span class="method-start">96873 ms</span>
+                <span class="method-start">47719 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">101868 ms</span>
+                <span class="method-start">52002 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">102163 ms</span>
+                <span class="method-start">52230 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterationFunctionality__NegativeScenaio_RegisterationScenario4</span>
-                <span class="method-start">112718 ms</span>
+                <span class="method-start">56836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">116236 ms</span>
+                <span class="method-start">59811 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">116499 ms</span>
+                <span class="method-start">60057 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">RegisterationFunctionality__NegativeScenaio_RegisterationScenario5</span>
-                <span class="method-start">133849 ms</span>
+                <span class="method-start">64702 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">137761 ms</span>
+                <span class="method-start">68053 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">138015 ms</span>
+                <span class="method-start">68308 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">138082 ms</span>
+                <span class="method-start">68361 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

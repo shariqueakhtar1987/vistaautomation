@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.VistaTestScenariosClass">
         <methods>
-          <include name="LoginFunctionality_PositiveScenario_LoginScenario2"/>
           <include name="beforeMethod"/>
+          <include name="LoginFunctionality_PositiveScenario_LoginScenario3"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
