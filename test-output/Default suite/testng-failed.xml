@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.VistaRegisterationTestScenarioClass">
+      <class name="tests.VistaShoppingTestScenarioClass">
         <methods>
           <include name="beforeMethod"/>
           <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="RegisterationFunctionality_PositiveScenario_RegisterationScenario1"/>
+          <include name="Shopping_PositiveScenario_Scenario1"/>
           <include name="beforeSuite"/>
           <include name="afterTest"/>
         </methods>
-      </class> <!-- tests.VistaRegisterationTestScenarioClass -->
+      </class> <!-- tests.VistaShoppingTestScenarioClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

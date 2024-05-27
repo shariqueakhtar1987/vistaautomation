@@ -7,9 +7,9 @@ import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 
-import utils.UIAutomationUtils;
+import utils.GenericUtilityClass;
 
-public class AppUtilityClass extends UIAutomationUtils{
+public class AppUtilityClass extends GenericUtilityClass{
 	
 	WebDriver driver;
 	Map<String, String> TestData = new HashMap<>();
@@ -100,6 +100,26 @@ public class AppUtilityClass extends UIAutomationUtils{
 	public String shopItems(String ScenarioId) throws IOException {
 		String PageName = "Shoping";
 		TestData = this.getTestData(PageName, ScenarioId);
+		if(TestData.get("MenuOption").equalsIgnoreCase("Clothes")) {
+			this.moveToElement(this.getWebElement("ClothesMenuLink"));
+		}else if(TestData.get("MenuOption").equalsIgnoreCase("Accessories")) {
+			this.moveToElement(this.getWebElement("AccessoriesMenuLink"));
+		}else if(TestData.get("MenuOption").equalsIgnoreCase("Art")) {
+			this.clickElement(this.getWebElement("ArtMenuLink"));
+		}
+		this.clickElement(this.getWebElementwithDynamicXPath("SubMenuLink",TestData.get("ProductCategory")));
+		this.clickElement(this.getWebElementwithDynamicXPath("ProductTitleList",TestData.get("ProductName")));
+		this.clickElement(this.getWebElement("Add2CartBtn"));
+		this.clickElement(this.getWebElement("Prcd2ChkOut"));
+		this.clickElement(this.getWebElement("Prcd2ChkOutConfirmation"));
+		this.clickElement(this.getWebElement("AddressConfirmBtn"));
+		this.clickElement(this.getWebElement("DlvryConfirmBtn"));
+		this.clickElement(this.getWebElementwithDynamicXPath("PaymentOptionCheckbox",TestData.get("PaymentOption")));
+		this.clickElement(this.getWebElement("PaymentTnCCheckbox"));
+		this.clickElement(this.getWebElement("PlaceOrderBtn"));
+		
+
+		
 		
 		return ScenarioId;
 		

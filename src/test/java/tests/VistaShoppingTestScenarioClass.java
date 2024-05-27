@@ -23,6 +23,7 @@ public class VistaShoppingTestScenarioClass extends Hooks {
 		AppUtilityClass AppUtil = new AppUtilityClass(driver);
 		if (AppUtil.login(ScenarioId).equalsIgnoreCase("Pass")) {
 			test.pass("Step:- Login Functionality with Valid Data - Passed");
+			AppUtil.shopItems(ScenarioId);
 		} else if (AppUtil.login(ScenarioId).equalsIgnoreCase("Fail")) {
 			test.fail("Step:- Login Functionality with Valid Data - Failed");
 			AppUtil.TakeScreenshot(ScenarioId);

@@ -22,13 +22,13 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
 
-public class UIAutomationUtils {
+public class GenericUtilityClass {
 	// IMPLEMENTATION FOR RE-USABLE METHODS
 	
 	public WebDriver driver;
 	Wait<WebDriver> wait;
 	
-	public UIAutomationUtils(WebDriver driver) {
+	public GenericUtilityClass(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -167,5 +167,27 @@ public class UIAutomationUtils {
 		this.driver.quit();
 		Assert.fail();
 		
+	}
+	
+
+	
+	@SuppressWarnings("resource")
+	public WebElement getWebElementwithDynamicXPath(String locatorName, String Text) throws IOException {
+
+		FileInputStream fis = new FileInputStream(new File("./src/test/resources/webelements.xlsx"));
+		Workbook workBook = new XSSFWorkbook(fis);
+		Sheet sheet = workBook.getSheet("ObjectRepository");
+		int numRows = sheet.getLastRowNum();
+		for(int i=0; i<=numRows; i++) {
+			if(sheet.getRow(i).getCell(1).getStringCellValue().equalsIgnoreCase(locatorName)) {
+				String LocatorVal =  sheet.getRow(i).getCell(3).getStringCellValue();	
+				return this.driver.findElement(By.xpath(LocatorVal.replace("{%s}", Text)));
+			}
+		}
+		workBook.close();
+		if(numRows<1) {
+			return null;
+		}
+		return null;
 	}
 }

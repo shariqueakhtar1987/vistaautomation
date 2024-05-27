@@ -33,7 +33,6 @@ public class VistaLogInLogOutTestScenarioClass extends Hooks {
 			test.fail("Step:- Login Functionality with Valid Data - Failed");
 			AppUtil.TakeScreenshot(ScenarioId);
 		}
-
 	}
 
 	@Test(groups = { "Login Functionality" }, priority = 2, alwaysRun = true)

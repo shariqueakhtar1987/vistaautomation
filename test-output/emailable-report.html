@@ -8,22 +8,44 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">VistaAutomatotionTestSuite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">91,144</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,433</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">VistaAutomatotionTestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.VistaLogInLogOutTestScenarioClass</td><td><a href="#m0">LoginFunctionality_PositiveScenario_LoginScenario3</a></td><td rowspan="1">1716713485848</td><td rowspan="1">5223</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.VistaLogInLogOutTestScenarioClass</td><td><a href="#m1">LoginFunctionality_NegativeScenario_LoginScenario2</a></td><td rowspan="1">1716713476645</td><td rowspan="1">2076</td></tr><tr class="passedeven"><td><a href="#m2">LoginFunctionality_PositiveScenario_LoginScenario1</a></td><td rowspan="1">1716713463570</td><td rowspan="1">5349</td></tr><tr class="passedodd"><td rowspan="5">tests.VistaRegisterationTestScenarioClass</td><td><a href="#m3">RegisterationFunctionality_PositiveScenario_RegisterationScenario1</a></td><td rowspan="1">1716713496866</td><td rowspan="1">6321</td></tr><tr class="passedodd"><td><a href="#m4">RegisterationFunctionality__NegativeScenaio_RegisterationScenario2</a></td><td rowspan="1">1716713511029</td><td rowspan="1">3155</td></tr><tr class="passedodd"><td><a href="#m5">RegisterationFunctionality__NegativeScenaio_RegisterationScenario3</a></td><td rowspan="1">1716713521266</td><td rowspan="1">4440</td></tr><tr class="passedodd"><td><a href="#m6">RegisterationFunctionality__NegativeScenaio_RegisterationScenario4</a></td><td rowspan="1">1716713532841</td><td rowspan="1">3165</td></tr><tr class="passedodd"><td><a href="#m7">RegisterationFunctionality__NegativeScenaio_RegisterationScenario5</a></td><td rowspan="1">1716713543428</td><td rowspan="1">3080</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.VistaShoppingTestScenarioClass</td><td><a href="#m0">Shopping_PositiveScenario_Scenario1</a></td><td rowspan="1">1716832348889</td><td rowspan="1">19390</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.VistaLogInLogOutTestScenarioClass#LoginFunctionality_PositiveScenario_LoginScenario3</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: null
-	at utils.UIAutomationUtils.TakeScreenshot(UIAutomationUtils.java:158)
-	at tests.VistaLogInLogOutTestScenarioClass.LoginFunctionality_PositiveScenario_LoginScenario3(VistaLogInLogOutTestScenarioClass.java:68)
+<h2>Default test</h2><h3 id="m0">tests.VistaShoppingTestScenarioClass#Shopping_PositiveScenario_Scenario1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at utils.GenericUtilityClass.type(GenericUtilityClass.java:67)
+	at appUtil.AppUtilityClass.login(AppUtilityClass.java:28)
+	at tests.VistaShoppingTestScenarioClass.Shopping_PositiveScenario_Scenario1(VistaShoppingTestScenarioClass.java:24)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.VistaLogInLogOutTestScenarioClass#LoginFunctionality_NegativeScenario_LoginScenario2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.VistaLogInLogOutTestScenarioClass#LoginFunctionality_PositiveScenario_LoginScenario1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.VistaRegisterationTestScenarioClass#RegisterationFunctionality_PositiveScenario_RegisterationScenario1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.VistaRegisterationTestScenarioClass#RegisterationFunctionality__NegativeScenaio_RegisterationScenario2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.VistaRegisterationTestScenarioClass#RegisterationFunctionality__NegativeScenaio_RegisterationScenario3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.VistaRegisterationTestScenarioClass#RegisterationFunctionality__NegativeScenaio_RegisterationScenario4</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.VistaRegisterationTestScenarioClass#RegisterationFunctionality__NegativeScenaio_RegisterationScenario5</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

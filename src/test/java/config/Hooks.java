@@ -55,6 +55,7 @@ public class Hooks {
 	
 	@AfterMethod
 	public void afterMethod() {
+		// Add the take screenshot
 		this.closeBrowser();
 	}
 	
