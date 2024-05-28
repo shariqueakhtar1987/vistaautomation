@@ -97,9 +97,10 @@ public class AppUtilityClass extends GenericUtilityClass{
 		
 	}
 
-	public String shopItems(String ScenarioId) throws IOException {
+	public String shopItems(String ScenarioId) throws IOException, InterruptedException {
 		String PageName = "Shoping";
 		TestData = this.getTestData(PageName, ScenarioId);
+		String ScenarioType = TestData.get("ScenarioType");
 		if(TestData.get("MenuOption").equalsIgnoreCase("Clothes")) {
 			this.moveToElement(this.getWebElement("ClothesMenuLink"));
 		}else if(TestData.get("MenuOption").equalsIgnoreCase("Accessories")) {
@@ -117,13 +118,12 @@ public class AppUtilityClass extends GenericUtilityClass{
 		this.clickElement(this.getWebElementwithDynamicXPath("PaymentOptionCheckbox",TestData.get("PaymentOption")));
 		this.clickElement(this.getWebElement("PaymentTnCCheckbox"));
 		this.clickElement(this.getWebElement("PlaceOrderBtn"));
-		
-
-		
-		
-		return ScenarioId;
-		
+		if(ScenarioType.equalsIgnoreCase("Positive") & this.elementExist(this.getWebElements("PlaceOrderBtn"))==false) {
+			return "Pass";
+		}else if(ScenarioType.equalsIgnoreCase("Negative") & this.elementExist(this.getWebElements("PlaceOrderBtn"))==true) {
+			return "Pass";
+		}else {
+			return "Fail";
+		}		
 	}
-
-
 }

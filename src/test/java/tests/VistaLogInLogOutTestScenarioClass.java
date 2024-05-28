@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import appUtil.AppUtilityClass;
 import config.Hooks;
+import reporting.MyRetry;
 
 public class VistaLogInLogOutTestScenarioClass extends Hooks {
 
