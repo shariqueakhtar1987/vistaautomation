@@ -25,7 +25,13 @@ public class VistaShoppingTestScenarioClass extends Hooks {
 			test.pass("Step:- Login Functionality with Valid Data - Passed");
 			if (AppUtil.shopItems(ScenarioId).equalsIgnoreCase("Pass")) {
 				test.pass("Step:- Add2Cart Functionality with Valid Data - Passed");
-			}else if (AppUtil.login(ScenarioId).equalsIgnoreCase("Fail")) {
+				if (AppUtil.logout(ScenarioId).equalsIgnoreCase("Pass")) {
+					test.pass("Step:- Logout Functionality with Valid Data - Passed");
+				} else if (AppUtil.logout(ScenarioId).equalsIgnoreCase("Fail")) {
+					test.fail("Step:- Logout Functionality with Valid Data - Failed");
+					AppUtil.TakeScreenshot(ScenarioId);
+				}
+			} else if (AppUtil.login(ScenarioId).equalsIgnoreCase("Fail")) {
 				test.fail("Step:- Add2Cart Functionality with Valid Data - Failed");
 				AppUtil.TakeScreenshot(ScenarioId);
 			}
