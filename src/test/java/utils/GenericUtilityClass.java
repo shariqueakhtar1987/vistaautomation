@@ -3,12 +3,16 @@ package utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.*;
+import java.time.Duration;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import config.Hooks;
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.formula.atp.Switch;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -18,21 +22,26 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class GenericUtilityClass {
+public class GenericUtilityClass extends Hooks {
 	// IMPLEMENTATION FOR RE-USABLE METHODS
 
 	public WebDriver driver;
-	Wait<WebDriver> wait;
-
+	WebDriverWait wait;
+	Map<String, String> configObject;
+	//Hooks hooks = new Hooks();
 	public GenericUtilityClass(WebDriver driver) {
 		this.driver = driver;
+		this.configObject = readConfigToMap();
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(configObject.get("wait_duration"))));
 	}
 
 	/**
-	 * 
+	 *
 	 * @param url
 	 */
 	public void navigateToUrl(String url) {
@@ -47,6 +56,7 @@ public class GenericUtilityClass {
 
 	public void moveToElement(WebElement element) {
 		Actions actions = new Actions(this.driver);
+		waitForWebElement(element);
 		actions.moveToElement(element).build().perform();
 	}
 
@@ -64,14 +74,17 @@ public class GenericUtilityClass {
 	}
 
 	public boolean elementExist(List<WebElement> element) throws InterruptedException {
-		Thread.sleep(1000);
+		waitForAllWebElement(element);
         return !element.isEmpty();
 	}
 
+	public void waitForAllWebElement(List<WebElement> element) {
+		//this.wait.until(ExpectedConditions.visibilityOfAllElements(element));
+
+	}
+
 	public void waitForWebElement(WebElement element) {
-//		wait = new WebDriverWait(this.driver,Duration.ofSeconds(Integer.parseInt(Hooks.configObject.get("wait_duration"))));
-//		//Hooks.configObject.get("wait_duration")
-//		wait.until(ExpectedConditions.);
+		//this.wait.until(ExpectedConditions.visibilityOfAllElements(element));
 
 	}
 
@@ -132,6 +145,59 @@ public class GenericUtilityClass {
 		return null;
 	}
 
+	public Connection getSQLConnection(){
+		try{
+			if(DriverManager.getConnection(configObject.get("SQLConnectionString"),configObject.get("SQLServerUId"),configObject.get("SQLServerPwd")).isClosed()){
+				return null;
+			}else{
+				return DriverManager.getConnection(configObject.get("SQLConnectionString"),configObject.get("SQLServerUId"),configObject.get("SQLServerPwd"));
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return null;
+    }
+
+	public Map<String, String> getSQLTestData(String PageName, String ScenarioId) throws IOException, SQLException {
+		Map<String, String> TestData = new HashMap<>();
+		String query="";
+		switch (PageName) {
+			case "Login":
+				query = "SELECT * FROM VB_LoginDetails";
+				break;
+			case "Registeration":
+				//query = "SELECT * FROM VB_LoginDetails";
+				//break;
+			case "Shopping":
+				//query = "SELECT * FROM VB_LoginDetails";
+				//	break;
+		}
+		try{
+			Connection con = this.getSQLConnection();
+			Statement statement = con.createStatement();
+			ResultSet resultSet = statement.executeQuery(query);
+			ResultSetMetaData RS = resultSet.getMetaData();
+			int row= 1;
+			int column=1;
+			while (resultSet.next()){
+				row = row ++;
+				if(resultSet.getString(row).equalsIgnoreCase(ScenarioId)){
+					while(column<=RS.getColumnCount()) {
+						TestData.put(RS.getColumnName(column),resultSet.getString(column));
+						column++;
+					}
+					break;
+				}
+			}
+			con.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+
+		return TestData;
+	}
+
 	public Map<String, String> getTestData(String PageName, String ScenarioId) throws IOException {
 		Map<String, String> TestData = new HashMap<>();
 		FileInputStream fis = new FileInputStream(new File("./src/test/resources/test-data.xlsx"));
@@ -167,7 +233,7 @@ public class GenericUtilityClass {
 		Assert.fail();
 
 	}
-	
+
 	public WebElement getWebElementwithDynamicXPath(String locatorName, String Text) throws IOException {
 
 		FileInputStream fis = new FileInputStream(new File("./src/test/resources/webelements.xlsx"));

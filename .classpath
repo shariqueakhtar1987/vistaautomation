@@ -38,5 +38,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/ShariqueA/Downloads/sqljdbc_12.6.2.0_enu/sqljdbc_12.6/enu/jars/mssql-jdbc-12.6.2.jre8.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

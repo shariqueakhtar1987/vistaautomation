@@ -1,0 +1,5 @@
+﻿ScenarioId,ScenarioType,EmailId,Password
+LoginScenario1,Positive,TesthnnjUhnnkkk1716664676120@test.com,TesthnnjUhnnkkk1236
+LoginScenario2,Negative,TesthnnjUhnnkkk1716664676120@test.com,jgjhgkkllklKL997000
+LoginScenario3,Positive,TesthnnjUhnnkkk1716664676120@test.com,jgjhgkkllklKL997000
+ShoppingScenario1,Positive,TesthnnjUhnnkkk1716664676120@test.com,TesthnnjUhnnkkk1236

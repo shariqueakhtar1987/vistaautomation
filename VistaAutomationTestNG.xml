@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="VistaAutomatotionTestSuite">
-	<listeners>
-		<listener class-name="reporting.ReportingTestListenerClass"></listener>
-	</listeners>
-	<test thread-count="5" name="Test">
+<suite name="VistaAutomatotionTestSuite" thread-count="5" parallel="classes">
+	<test thread-count="5" name="Test" parallel="classes">
 		<classes>
 			<class name="tests.VistaLogInLogOutTestScenarioClass" />
 			<class name="tests.VistaRegisterationTestScenarioClass" />
-			<class name="tests.DummyTestClass"></class>
+			<class name="tests.VistaShoppingTestScenarioClass" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
